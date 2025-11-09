@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — DIEUVOITTOUT — Une lumière pour cette génération</title>
+    <meta name="description" content="Contactez-nous pour des prières, témoignages ou collaborations. Notre équipe est là pour vous accompagner spirituellement.">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .font-display {
+            font-family: 'Playfair Display', serif;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/images/contact/contact1.jpg');
+        }
+        .prayer-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('assets/images/contact/contact2.jpg');
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 backdrop-blur bg-white/80 shadow-sm">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="#accueil" class="text-2xl font-bold text-primary font-display">DIEUVOITTOUT</a>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="text-gray-700 hover:text-primary focus:outline-none" aria-label="Menu">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+                
+                <!-- Desktop menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#accueil" class="text-gray-700 hover:text-primary">Accueil</a>
+                    <a href="#prieres" class="text-gray-700 hover:text-primary">Prières</a>
+                    <a href="#temoignages" class="text-gray-700 hover:text-primary">Témoignages</a>
+                    <a href="#contact" class="text-primary font-medium">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg bg-cover bg-center text-white py-20 md:py-32 px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold font-display mb-4">Entrons en contact <span class="text-primary">🙌</span></h1>
+                <p class="text-xl mb-8">"Nous serions honorés de prier avec toi, d'écouter ton histoire et de t'accompagner."</p>
+                <a href="#contact-form" class="inline-block bg-primary hover:bg-primary text-white font-medium py-3 px-8 rounded-full transition duration-200 shadow-lg">Écris-nous un message</a>
+            </div>
+        </section>
+
+        <!-- Welcome Message -->
+        <section class="max-w-4xl mx-auto py-12 px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold font-display mb-4">Votre voix compte</h2>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    Chez DIEUVOITTOUT, nous croyons que chaque personne est précieuse aux yeux de Dieu. Que vous ayez besoin de prière, 
+                    souhaitiez partager un témoignage de victoire, ou explorer une collaboration, notre équipe est là pour vous écouter 
+                    et vous soutenir dans votre marche spirituelle. N'hésitez pas à nous contacter - votre message sera accueilli avec 
+                    amour et confidentialité.
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section id="contact-form" class="py-12 bg-primary-10">
+            <div class="max-w-xl mx-auto bg-white rounded-2xl shadow-md p-6 md:p-8">
+                <h2 class="text-2xl font-bold font-display mb-6 text-center">Envoyez-nous un message</h2>
+                <form id="contactForm" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nom complet</label>
+                        <input type="text" id="name" name="name" placeholder="Votre nom" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary">
+                    </div>
+                    
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                        <input type="email" id="email" name="email" placeholder="votre@email.com" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary">
+                    </div>
+                    
+                    <div>
+                        <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Objet</label>
+                        <select id="subject" name="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary">
+                            <option value="prayer">Demande de prière</option>
+                            <option value="testimony">Partager un témoignage</option>
+                            <option value="collaboration">Collaboration</option>
+                            <option value="other">Autre</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Écrivez votre message ici..." required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-primary hover:bg-primary text-white font-medium py-3 px-4 rounded-lg transition duration-200 shadow">
+                        Envoyer mon message
+                    </button>
+                </form>
+                
+                <div id="formSuccess" class="hidden mt-4 p-4 bg-green-100 text-green-700 rounded-lg">
+                    Merci ! Nous avons reçu ton message. Un membre de notre équipe te contactera bientôt.
+                </div>
+            </div>
+        </section>
+
+        <!-- Prayer Section -->
+        <section class="prayer-bg bg-cover bg-center text-white py-16 my-12">
+            <div class="max-w-4xl mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold font-display mb-4">Nous prions avec vous</h2>
+                <p class="text-lg mb-6">
+                    Notre équipe d'intercession prie fidèlement chaque semaine pour toutes les demandes reçues. 
+                    Vos requêtes sont traitées avec discrétion et compassion.
+                </p>
+                <a href="#contact-form" class="inline-block bg-white hover:bg-gray-100 text-primary font-medium py-2 px-6 rounded-full transition duration-200">
+                    Soumettre une requête de prière
+                </a>
+            </div>
+        </section>
+
+        <!-- Contact Info -->
+        <section class="max-w-6xl mx-auto py-12 px-4">
+            <h2 class="text-3xl font-bold font-display mb-8 text-center">Nos coordonnées</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+                    <div class="text-primary mb-3 inline-block">
+                        <i data-feather="mail"></i>
+                    </div>
+                    <h3 class="font-medium mb-1">Email</h3>
+                    <p class="text-gray-600">contact@dieuvoittout.org</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+                    <div class="text-primary mb-3 inline-block">
+                        <i data-feather="phone"></i>
+                    </div>
+                    <h3 class="font-medium mb-1">Téléphone</h3>
+                    <p class="text-gray-600">+33 6 12 34 56 78</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+                    <div class="text-primary mb-3 inline-block">
+                        <i data-feather="map-pin"></i>
+                    </div>
+                    <h3 class="font-medium mb-1">Adresse</h3>
+                    <p class="text-gray-600">123 Rue de la Foi, 75000 Paris</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+                    <div class="text-primary mb-3 inline-block">
+                        <i data-feather="clock"></i>
+                    </div>
+                    <h3 class="font-medium mb-1">Horaires</h3>
+                    <p class="text-gray-600">Lun–Ven : 8h – 17h</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Media -->
+        <section class="bg-gray-100 py-12">
+            <div class="max-w-4xl mx-auto px-4 text-center">
+                <h2 class="text-2xl font-bold font-display mb-4">Suivez-nous</h2>
+                <p class="text-gray-600 mb-6">Suis-nous pour rester inspiré(e) et recevoir la pensée du jour.</p>
+                
+                <div class="flex justify-center space-x-6">
+                    <a href="#" aria-label="Facebook" class="text-gray-700 hover:text-primary transition duration-200">
+                        <i data-feather="facebook"></i>
+                    </a>
+                    <a href="#" aria-label="Instagram" class="text-gray-700 hover:text-primary transition duration-200">
+                        <i data-feather="instagram"></i>
+                    </a>
+                    <a href="#" aria-label="YouTube" class="text-gray-700 hover:text-primary transition duration-200">
+                        <i data-feather="youtube"></i>
+                    </a>
+                    <a href="#" aria-label="TikTok" class="text-gray-700 hover:text-primary transition duration-200">
+                        <i data-feather="message-circle"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="max-w-4xl mx-auto py-12 px-4">
+            <h2 class="text-3xl font-bold font-display mb-8 text-center">Questions fréquentes</h2>
+            
+            <div class="space-y-4">
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h3 class="font-medium mb-2">Quel est le délai de réponse ?</h3>
+                    <p class="text-gray-600">Nous nous efforçons de répondre à tous les messages dans un délai de 48 heures. Les demandes de prière sont traitées chaque mercredi.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h3 class="font-medium mb-2">Mes informations seront-elles confidentielles ?</h3>
+                    <p class="text-gray-600">Absolument. Tous vos détails personnels resteront privés. Les témoignages partagés ne seront publiés qu'avec votre consentement explicite.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h3 class="font-medium mb-2">Puis-je demander une prière anonyme ?</h3>
+                    <p class="text-gray-600">Oui, vous pouvez simplement indiquer "Anonyme" comme nom. Nous respectons toutes les demandes de confidentialité.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bible Verse -->
+        <section class="bg-primary-10 py-12">
+            <div class="max-w-3xl mx-auto px-4 text-center">
+                <blockquote class="italic text-xl text-gray-700 leading-relaxed">
+                    "L'Éternel regarde du haut des cieux, il voit tous les fils de l'homme."<br>
+                    <span class="not-italic font-medium">Psaume 33:13</span>
+                </blockquote>
+                <p class="mt-4 text-gray-600">Dieu voit votre situation et entend votre cri. Ayez confiance en son amour infini.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 px-4">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-4">DIEUVOITTOUT</h3>
+                    <p class="text-gray-300">Une lumière pour cette génération.</p>
+                </div>
+                <div class="flex space-x-6 mb-6 md:mb-0">
+                    <a href="#" aria-label="Facebook" class="text-gray-300 hover:text-primary transition duration-300">
+                        <i data-feather="facebook"></i>
+                    </a>
+                    <a href="#" aria-label="Instagram" class="text-gray-300 hover:text-primary transition duration-300">
+                        <i data-feather="instagram"></i>
+                    </a>
+                    <a href="#" aria-label="YouTube" class="text-gray-300 hover:text-primary transition duration-300">
+                        <i data-feather="youtube"></i>
+                    </a>
+                </div>
+                <div class="text-gray-300 text-sm">
+                    <a href="#" class="hover:text-primary transition duration-300">Mentions légales</a> | 
+                    <a href="#" class="hover:text-primary transition duration-300">Contact</a> | 
+                    <a href="#" class="hover:text-primary transition duration-300">Politique de confidentialité</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2025 DIEUVOITTOUT. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Hide form and show success message
+            document.getElementById('contactForm').classList.add('hidden');
+            document.getElementById('formSuccess').classList.remove('hidden');
+            
+            // In a real implementation, you would send the form data to a server here
+        });
+        
+        // Initialize feather icons
+        feather.replace();
+    </script>
+</body>
+</html>

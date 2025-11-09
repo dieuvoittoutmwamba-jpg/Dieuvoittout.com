@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priere - DIEUVOITTOUT</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Navigation -->
+    <script src="components/navigation-horizontal.js"></script>
+    <custom-navigation-horizontal></custom-navigation-horizontal>
+
+    <main class="container mx-auto px-4 py-16">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Espace de Prière</h1>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">"Priez sans cesse" - 1 Thessaloniciens 5:17</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            <div class="bg-white p-8 rounded-xl shadow-md">
+                <div class="flex items-center mb-6">
+                    <div class="bg-primary/10 p-3 rounded-full mr-4">
+                        <i data-feather="edit-3" class="text-primary w-6 h-6"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-800">Demandes de Prière</h2>
+                </div>
+                <form class="space-y-4">
+                    <div>
+                        <label for="prayer-title" class="block text-gray-700 mb-2">Titre</label>
+                        <input type="text" id="prayer-title" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                    </div>
+                    <div>
+                        <label for="prayer-content" class="block text-gray-700 mb-2">Votre demande</label>
+                        <textarea id="prayer-content" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
+                    </div>
+                    <div class="flex justify-between">
+                        <button type="reset" class="bg-gray-200 text-gray-700 px-6 py-3 rounded-lg font-bold hover:bg-gray-300 transition duration-300">
+                            Envoyer
+                        </button>
+                        <button type="submit" class="bg-primary text-white px-6 py-3 rounded-lg font-bold hover:bg-opacity-90 transition duration-300">
+                            <i data-feather="send" class="inline mr-2"></i>Envoyer
+                        </button>
+                    </div>
+</form>
+            </div>
+
+            <div class="bg-white p-8 rounded-xl shadow-md">
+                <div class="flex items-center mb-6">
+                    <div class="bg-secondary/10 p-3 rounded-full mr-4">
+                        <i data-feather="heart" class="text-secondary w-6 h-6"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-800">Prier pour les autres</h2>
+                </div>
+                <div class="space-y-4" id="prayer-requests">
+                    <!-- Prayer requests will be loaded here -->
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h3 class="font-bold text-gray-800">Guérison pour ma mère</h3>
+                        <p class="text-gray-600 mt-2">Ma mère est malade depuis plusieurs mois. Je demande vos prières pour sa guérison complète.</p>
+                        <div class="flex justify-between items-center mt-4 text-sm text-gray-500">
+                            <span>Jean P.</span>
+                            <button class="text-primary flex items-center">
+                                <i data-feather="thumbs-up" class="w-4 h-4 mr-1"></i> Prier
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h3 class="font-bold text-gray-800">Travail</h3>
+                        <p class="text-gray-600 mt-2">Je cherche un emploi depuis 6 mois. Priez pour que Dieu m'ouvre les bonnes portes.</p>
+                        <div class="flex justify-between items-center mt-4 text-sm text-gray-500">
+                            <span>Marie D.</span>
+                            <button class="text-primary flex items-center">
+                                <i data-feather="thumbs-up" class="w-4 h-4 mr-1"></i> Prier
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <button class="mt-4 text-primary font-bold flex items-center justify-center w-full py-2 border border-primary rounded-lg hover:bg-primary/10 transition duration-300">
+                    Voir plus de demandes
+                </button>
+            </div>
+        </div>
+
+        <section class="bg-white p-8 rounded-xl shadow-md mb-16">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Versets sur la Prière</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <p class="italic text-gray-700">"Ne vous inquiétez de rien; mais en toute chose faites connaître vos besoins à Dieu par des prières et des supplications, avec des actions de grâces."</p>
+                    <p class="text-right mt-4 text-gray-500">Philippiens 4:6</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <p class="italic text-gray-700">"Si vous demeurez en moi, et que mes paroles demeurent en vous, demandez ce que vous voudrez, et cela vous sera accordé."</p>
+                    <p class="text-right mt-4 text-gray-500">Jean 15:7</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <p class="italic text-gray-700">"La prière fervente du juste a une grande efficacité."</p>
+                    <p class="text-right mt-4 text-gray-500">Jacques 5:16</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-gradient-to-r from-primary/10 to-secondary/10 p-8 rounded-xl text-center">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Heure de Prière Communautaire</h2>
+            <p class="text-gray-600 mb-6">Rejoignez-nous chaque vendredi à 19h pour un temps de prière en communauté.</p>
+            <button class="bg-primary text-white px-6 py-3 rounded-lg font-bold hover:bg-opacity-90 transition duration-300 inline-flex items-center">
+                <i data-feather="calendar" class="mr-2"></i> Ajouter à mon calendrier
+            </button>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <script src="components/footer.js"></script>
+    <custom-footer></custom-footer>
+
+    <!-- Scripts -->
+    <script>
+        feather.replace();
+    </script>
+    <script src="script.js"></script>
+</body>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 px-4">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-4">DIEUVOITTOUT</h3>
+                    <p class="text-gray-300">Une lumière pour cette génération.</p>
+                </div>
+                <div class="flex space-x-6 mb-6 md:mb-0">
+                    <a href="#" aria-label="Facebook" class="text-gray-300 hover:text-primary transition duration-300">
+                        <i data-feather="facebook"></i>
+                    </a>
+                    <a href="#" aria-label="Instagram" class="text-gray-300 hover:text-primary transition duration-300">
+                        <i data-feather="instagram"></i>
+                    </a>
+                    <a href="#" aria-label="YouTube" class="text-gray-300 hover:text-primary transition duration-300">
+                        <i data-feather="youtube"></i>
+                    </a>
+                </div>
+                <div class="text-gray-300 text-sm">
+                    <a href="#" class="hover:text-primary transition duration-300">Mentions légales</a> | 
+                    <a href="#" class="hover:text-primary transition duration-300">Contact</a> | 
+                    <a href="#" class="hover:text-primary transition duration-300">Politique de confidentialité</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2025 DIEUVOITTOUT. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+</html>

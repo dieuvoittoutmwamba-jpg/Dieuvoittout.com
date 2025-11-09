@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Études Bibliques - DIEUVOITTOUT</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Navigation -->
+    <script src="components/navigation-horizontal.js"></script>
+    <custom-navigation-horizontal></custom-navigation-horizontal>
+
+    <main class="container mx-auto px-4 py-16">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Études Bibliques</h1>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">"Sondez les Écritures... ce sont elles qui rendent témoignage de moi." - Jean 5:39</p>
+        </div>
+
+        <!-- Study Categories -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Catégories d'Études</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <a href="#" class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                    <div class="bg-primary/10 p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                        <i data-feather="book-open" class="text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Ancien Testament</h3>
+                    <p class="text-gray-600">Explorez les fondements de la foi à travers les livres de l'Ancien Testament.</p>
+                </a>
+                <a href="#" class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                    <div class="bg-secondary/10 p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                        <i data-feather="book" class="text-secondary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Nouveau Testament</h3>
+                    <p class="text-gray-600">Découvrez la vie et les enseignements de Jésus-Christ et des apôtres.</p>
+                </a>
+                <a href="#" class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                    <div class="bg-purple-500/10 p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                        <i data-feather="users" class="text-purple-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Personnages Bibliques</h3>
+                    <p class="text-gray-600">Apprenez des exemples de foi et de leadership dans la Bible.</p>
+                </a>
+                <a href="#" class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                    <div class="bg-yellow-500/10 p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                        <i data-feather="compass" class="text-yellow-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Thèmes Spirituels</h3>
+                    <p class="text-gray-600">Approfondissez votre compréhension des doctrines chrétiennes.</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Recent Studies -->
+        <section class="mb-16">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold text-gray-800">Études Récentes</h2>
+                <a href="#" class="text-primary font-bold flex items-center">
+                    Voir toutes les études
+                    <i data-feather="arrow-right" class="ml-2"></i>
+                </a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Study 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                    <img src="assets/images/site/card1.jpg" alt="L'amour de Dieu" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 bg-primary/10 text-primary text-sm font-medium rounded-full mb-2">Nouveau Testament</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">L'amour inconditionnel de Dieu</h3>
+                        <p class="text-gray-600 mb-4">Une étude approfondie de Romains 8:31-39 sur l'amour infaillible de Dieu.</p>
+                        <a href="#" class="text-primary font-bold flex items-center">
+                            Lire l'étude
+                            <i data-feather="arrow-right" class="ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Study 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                    <img src="assets/images/site/card2.jpg" alt="La foi d'Abraham" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 bg-secondary/10 text-secondary text-sm font-medium rounded-full mb-2">Ancien Testament</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">La foi d'Abraham</h3>
+                        <p class="text-gray-600 mb-4">Comment Abraham est devenu le père de la foi selon Genèse 12-22.</p>
+                        <a href="#" class="text-primary font-bold flex items-center">
+                            Lire l'étude
+                            <i data-feather="arrow-right" class="ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Study 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                    <img src="assets/images/site/card3.jpg" alt="Le fruit de l'Esprit" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 bg-purple-500/10 text-purple-500 text-sm font-medium rounded-full mb-2">Thèmes Spirituels</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Le fruit de l'Esprit</h3>
+                        <p class="text-gray-600 mb-4">Une exploration de Galates 5:22-23 sur les caractéristiques de la vie en Christ.</p>
+                        <a href="#" class="text-primary font-bold flex items-center">
+                            Lire l'étude
+                            <i data-feather="arrow-right" class="ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Weekly Study -->
+        <section class="bg-gradient-to-r from-primary/10 to-secondary/10 p-8 rounded-xl mb-16">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6">Étude de la Semaine</h2>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">La prière selon le modèle de Jésus</h3>
+                    <p class="text-gray-700 mb-4">Cette semaine, nous étudions Matthieu 6:9-13, connu comme le "Notre Père", pour comprendre comment Jésus nous enseigne à prier.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#" class="bg-primary text-white px-6 py-2 rounded-lg font-bold hover:bg-opacity-90 transition duration-300 inline-flex items-center">
+                            <i data-feather="book-open" class="mr-2"></i> Lire l'étude
+                        </a>
+                        <a href="#" class="border border-primary text-primary px-6 py-2 rounded-lg font-bold hover:bg-primary/10 transition duration-300 inline-flex items-center">
+                            <i data-feather="download" class="mr-2"></i> Télécharger PDF
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <script src="components/footer.js"></script>
+    <custom-footer></custom-footer>
+
+    <!-- Scripts -->
+    <script>
+        feather.replace();
+    </script>
+    <script src="script.js"></script>
+</body>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 px-4">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-4">DIEUVOITTOUT</h3>
+                    <p class="text-gray-300">Une lumière pour cette génération.</p>
+                </div>
+                <div class="flex space-x-6 mb-6 md:mb-0">
+                    <a href="#" aria-label="Facebook" class="text-gray-300 hover:text-primary transition duration-300">
+                        <i data-feather="facebook"></i>
+                    </a>
+                    <a href="#" aria-label="Instagram" class="text-gray-300 hover:text-primary transition duration-300">
+                        <i data-feather="instagram"></i>
+                    </a>
+                    <a href="#" aria-label="YouTube" class="text-gray-300 hover:text-primary transition duration-300">
+                        <i data-feather="youtube"></i>
+                    </a>
+                </div>
+                <div class="text-gray-300 text-sm">
+                    <a href="#" class="hover:text-primary transition duration-300">Mentions légales</a> | 
+                    <a href="#" class="hover:text-primary transition duration-300">Contact</a> | 
+                    <a href="#" class="hover:text-primary transition duration-300">Politique de confidentialité</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2025 DIEUVOITTOUT. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+</html>

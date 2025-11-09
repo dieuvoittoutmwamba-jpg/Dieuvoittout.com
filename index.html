@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIEUVOITTOUT - Votre Portail Spirituel</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4F46E5',
+                        secondary: '#10B981',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Choose one navigation style -->
+    <!-- <script src="components/navigation.js"></script>
+    <custom-navigation></custom-navigation> -->
+    
+    <!-- Horizontal Navigation -->
+    <script src="components/navigation-horizontal.js"></script>
+    <custom-navigation-horizontal></custom-navigation-horizontal>
+    
+    <!-- Or Minimal Navigation -->
+    <!-- <script src="components/navigation-minimal.js"></script>
+    <custom-navigation-minimal></custom-navigation-minimal> -->
+    
+    <!-- Or Circular Navigation -->
+    <!-- <script src="components/navigation-circular.js"></script>
+    <custom-navigation-circular></custom-navigation-circular> -->
+<!-- Add padding for sidebar -->
+    <style>
+      main {
+        margin-left: 280px;
+        transition: margin 0.3s ease;
+      }
+      @media (max-width: 768px) {
+        main {
+          margin-left: 0;
+        }
+      }
+    </style>
+<!-- Verse of the Day -->
+    <div id="verse-of-the-day" class="container mx-auto px-6 py-4"></div>
+
+    <!-- Hero Section with Background Slider -->
+    <section class="pt-32 pb-20 text-white -mt-25 relative overflow-hidden">
+<div class="absolute inset-0 z-0">
+        <div id="hero-slider" class="h-full w-full">
+          <!-- Slides will be added dynamically -->
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-purple-600/90"></div>
+      </div>
+        <div class="container mx-auto px-6 text-center relative z-10">
+<h1 class="text-4xl md:text-6xl font-bold mb-6">BIENVENUE</h1>
+            <p class="text-xl md:text-2xl mb-8">Nous sommes tous une lumière pour cette génération.<br>
+            Nous croyons qu'en cette époque pleine de défis, Dieu parle encore, agit encore, et change encore des vies.<br>
+            Laisse Sa Parole t'éclairer aujourd'hui.</p>
+<div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#" class="bg-white text-primary px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition duration-300">Commencer le voyage</a>
+                <a href="#" class="border-2 border-white px-8 py-3 rounded-full font-bold hover:bg-white hover:text-primary transition duration-300">En savoir plus</a>
+            </div>
+        </div>
+    </section>
+    <!-- Prayer of the Day Section -->
+    <section class="py-16 bg-gradient-to-r from-primary/10 to-secondary/10">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">La Prière du Jour</h2>
+        <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-md">
+          <p class="text-gray-700 italic mb-4">"Père céleste, merci pour ta présence qui m’accompagne aujourd’hui.</p>
+          <p class="text-gray-700 italic mb-4">Donne-moi la sagesse, la paix et la force d’avancer selon ta volonté.</p>
+          <p class="text-gray-700 italic mb-4">Que ma vie soit un reflet de ton amour et de ta lumière.</p>
+        <p class="text-gray-700 italic">Au nom de Jésus, Amen."</p>
+        </div>
+        <div class="mt-6">
+          <a href="priere.html" class="bg-primary text-white px-6 py-2 rounded-lg font-bold hover:bg-opacity-90 transition duration-300 inline-flex items-center">
+            <i data-feather="pray" class="mr-2"></i> Aller à l'espace prière
+          </a>
+        </div>
+      </div>
+    </section>
+<!-- About Section -->
+    <section class="py-20 bg-white">
+<div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <img src="assets/images/site/card1.jpg" alt="Nature divine" class="rounded-lg shadow-xl">
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Notre Mission Spirituelle</h2>
+                    <p class="text-gray-600 mb-4">DIEUVOITTOUT est une communauté dédiée à vous rapprocher de la présence divine à travers des enseignements bibliques, des témoignages inspirants et une communion fraternelle.</p>
+                    <p class="text-gray-600 mb-6">Nous croyons que chaque âme a besoin de lumière, et nous sommes ici pour vous guider dans votre cheminement spirituel.</p>
+                    <a href="#" class="text-primary font-bold flex items-center">
+                        Découvrir notre histoire
+                        <i data-feather="arrow-right" class="ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-16">Nos Piliers Spirituels</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300">
+                    <div class="bg-primary bg-opacity-10 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="book" class="text-primary w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Études Bibliques</h3>
+                    <p class="text-gray-600">Des enseignements profonds et accessibles pour nourrir votre foi quotidienne.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300">
+                    <div class="bg-secondary bg-opacity-10 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="users" class="text-secondary w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Communauté</h3>
+                    <p class="text-gray-600">Rejoignez une famille spirituelle qui vous soutiendra dans votre marche avec Dieu.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300">
+                    <div class="bg-primary bg-opacity-10 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="heart" class="text-primary w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Prière</h3>
+                    <p class="text-gray-600">Un espace dédié à la prière et à l'intercession pour vos besoins spirituels.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-16">Témoignages Inspirants</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 p-8 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="assets/images/people/people1.jpg" alt="Marie D." class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Marie D.</h4>
+                            <p class="text-gray-500 text-sm">Membre depuis 2 ans</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"Grâce à DIEUVOITTOUT, j'ai retrouvé la paix dans mon cœur et une relation plus profonde avec Dieu. Les enseignements ont transformé ma vie spirituelle."</p>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 p-8 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="assets/images/people/people2.jpg" alt="Jean P." class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Jean P.</h4>
+                            <p class="text-gray-500 text-sm">Membre depuis 1 an</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"La communauté m'a accueilli à bras ouverts quand je traversais une période difficile. Je ne me sens plus seul dans ma foi."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-16">Questions Fréquentes</h2>
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <button class="flex justify-between items-center w-full text-left font-bold text-gray-800">
+                        <span>Qu'est-ce que Dieuvoittout et est-ce une église ?</span>
+                        <i data-feather="chevron-down" class="text-primary"></i>
+                    </button>
+                    <div class="mt-4 text-gray-600 hidden">
+                        <p class="mb-4">Dieuvoittout est une plateforme chrétienne interconfessionnelle dédiée à la foi, à la prière et aux témoignages. Elle a pour mission d'encourager, d'édifier et de fortifier les croyants à travers des contenus inspirants centrés sur la Parole de Dieu.</p>
+                        
+                        <p class="mb-4">Ce n'est pas une église locale, mais un espace spirituel en ligne qui rassemble des hommes et des femmes de différentes communautés chrétiennes autour d'une même vision : montrer que Dieu voit, entend et agit encore aujourd'hui.</p>
+                        
+                        <p>Dieuvoittout veut être "une lumière pour cette génération", un lieu où chacun peut trouver soutien, prière et espérance, où qu'il se trouve.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 2 -->
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <button class="flex justify-between items-center w-full text-left font-bold text-gray-800">
+                        <span>Que faire si j'ai besoin d'un accompagnement spirituel personnel ?</span>
+                        <i data-feather="chevron-down" class="text-primary"></i>
+                    </button>
+                    <div class="mt-4 text-gray-600 hidden">
+                        <p class="mb-4">Tu peux nous écrire en privé dans la rubrique Contact.</p>
+                        <p>Nous prendrons le temps de t'écouter, te conseiller ou te diriger vers une communauté chrétienne proche de toi.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 3 -->
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <button class="flex justify-between items-center w-full text-left font-bold text-gray-800">
+                        <span>Puis-je collaborer ou devenir partenaire ?</span>
+                        <i data-feather="chevron-down" class="text-primary"></i>
+                    </button>
+                    <div class="mt-4 text-gray-600 hidden">
+                        <p>Absolument ! Si tu souhaites collaborer, proposer un contenu ou soutenir la mission de DIEUVOITTOUT, contacte-nous via la page Contact et notre équipe te répondra avec joie.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Donation Section -->
+    <section class="py-16 bg-gradient-to-r from-primary/10 to-secondary/10">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-6">Soutenez notre ministère</h2>
+        <p class="text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
+          Votre générosité nous permet de continuer à partager la Parole de Dieu.
+        </p>
+        <button class="bg-primary text-white px-8 py-3 rounded-lg font-bold hover:bg-opacity-90 transition-all hover:scale-105">
+          <i data-feather="heart" class="inline mr-2"></i> Faire un don
+        </button>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-20 bg-white dark:bg-gray-800">
+<div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-16">Contactez-nous</h2>
+            <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label for="name" class="block text-gray-700 font-medium mb-2">Nom complet</label>
+                    <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                </div>
+                <div>
+                    <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                    <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                </div>
+                <div class="md:col-span-2">
+                    <label for="subject" class="block text-gray-700 font-medium mb-2">Sujet</label>
+                    <input type="text" id="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                </div>
+                <div class="md:cohttps://dieuvoittout-divinevision-portal.static.hf.space/$0l-span-2">
+                    <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                    <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
+                </div>
+                <div class="md:col-span-2">
+                    <button type="submit" class="bg-primary text-white px-8 py-3 rounded-lg font-bold hover:bg-opacity-90 transition duration-300">Envoyer le message</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 px-4">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-4">DIEUVOITTOUT</h3>
+                    <p class="text-gray-300">Une lumière pour cette génération.</p>
+                </div>
+                <div class="flex space-x-6 mb-6 md:mb-0">
+                    <a href="#" aria-label="Facebook" class="text-gray-300 hover:text-primary transition duration-300">
+                        <i data-feather="facebook"></i>
+                    </a>
+                    <a href="#" aria-label="Instagram" class="text-gray-300 hover:text-primary transition duration-300">
+                        <i data-feather="instagram"></i>
+                    </a>
+                    <a href="#" aria-label="YouTube" class="text-gray-300 hover:text-primary transition duration-300">
+                        <i data-feather="youtube"></i>
+                    </a>
+                </div>
+                <div class="text-gray-300 text-sm">
+                    <a href="#" class="hover:text-primary transition duration-300">Mentions légales</a> | 
+                    <a href="#" class="hover:text-primary transition duration-300">Contact</a> | 
+                    <a href="#" class="hover:text-primary transition duration-300">Politique de confidentialité</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2025 DIEUVOITTOUT. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        // Initialiser les icônes Feather
+        feather.replace();
+        
+        // Fonction pour gérer le clic sur une FAQ
+        function initFAQ() {
+            const faqItems = document.querySelectorAll('.bg-white.p-6');
+            
+            faqItems.forEach(item => {
+                const button = item.querySelector('button');
+                const content = item.querySelector('.mt-4');
+                const icon = button.querySelector('i');
+                
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    // Fermer toutes les autres FAQ
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            const otherContent = otherItem.querySelector('.mt-4');
+                            const otherIcon = otherItem.querySelector('i');
+                            if (otherContent) {
+                                otherContent.classList.add('hidden');
+                                if (otherIcon) {
+                                    otherIcon.style.transform = 'rotate(0deg)';
+                                }
+                            }
+                        }
+                    });
+                    
+                    // Basculer la FAQ actuelle
+                    if (content) {
+                        content.classList.toggle('hidden');
+                        if (icon) {
+                            icon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+                            icon.style.transition = 'transform 0.3s ease';
+                        }
+                    }
+                });
+            });
+        }
+
+        // Exécuter une fois que le DOM est chargé
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initFAQ);
+        } else {
+            initFAQ();
+        }
+    </script>
+</body>
+</html>

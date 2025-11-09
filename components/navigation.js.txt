@@ -1,0 +1,163 @@
+
+class CustomNavigation extends HTMLElement {
+  connectedCallback() {
+    this.attachShadow({ mode: 'open' });
+    this.shadowRoot.innerHTML = `
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+      <style>
+        * {
+          font-family: 'Poppins', sans-serif;
+        }
+        .sidebar {
+          width: 280px;
+          height: 100vh;
+          position: fixed;
+          left: 0;
+          top: 0;
+          background: linear-gradient(to bottom, #4F46E5, #764ba2);
+          color: white;
+          padding: 2rem 1rem;
+          display: flex;
+          flex-direction: column;
+          z-index: 100;
+          box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease;
+        }
+        .logo-container {
+          display: flex;
+          align-items: center;
+          margin-bottom: 2rem;
+          padding-bottom: 1rem;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .logo-icon {
+          color: #FACC15;
+          margin-right: 0.75rem;
+        }
+        .logo-text {
+          font-size: 1.5rem;
+          font-weight: 700;
+          color: white;
+        }
+        .nav-menu {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+        .nav-link {
+          display: flex;
+          align-items: center;
+          padding: 0.75rem 1rem;
+          border-radius: 0.375rem;
+          color: white;
+          font-weight: 500;
+          transition: all 0.2s ease;
+        }
+        .nav-link:hover {
+          background: rgba(255, 255, 255, 0.1);
+          color: #FACC15;
+        }
+        .nav-link i {
+          margin-right: 0.75rem;
+          width: 20px;
+          text-align: center;
+        }
+        .active {
+          background: rgba(255, 255, 255, 0.2);
+          color: #FACC15;
+        }
+        .mobile-toggle {
+          display: none;
+          position: fixed;
+          top: 1rem;
+          left: 1rem;
+          z-index: 101;
+          background: rgba(79, 70, 229, 0.8);
+          border: none;
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          color: white;
+          cursor: pointer;
+          transition: transform 0.3s ease;
+        }
+        .mobile-toggle.active {
+          transform: translateX(280px);
+        }
+@media (max-width: 768px) {
+          .sidebar {
+            transform: translateX(-100%);
+          }
+          .sidebar.open {
+            transform: translateX(0);
+          }
+          .mobile-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      </style>
+      <button class="mobile-toggle md:hidden" id="mobile-menu-button">
+        <i data-feather="menu"></i>
+      </button>
+<aside class="sidebar">
+        <div class="logo-container">
+          <img src="assets/images/logo.jpg" alt="Logo DIEUVOITTOUT" class="w-auto h-auto" style="width: 20%;">
+</div>
+<div class="nav-menu">
+          <a href="/" class="nav-link">
+            <i data-feather="home"></i>
+            Accueil
+          </a>
+          <a href="etudes.html" class="nav-link">
+            <i data-feather="book"></i>
+            Études Bibliques
+          </a>
+<a href="priere.html" class="nav-link">
+            <i data-feather="pray"></i>
+            Prière
+          </a>
+<a href="#" class="nav-link">
+            <i data-feather="users"></i>
+            Témoignages
+          </a>
+          <a href="#" class="nav-link">
+            <i data-feather="mail"></i>
+            Contact
+          </a>
+        </div>
+        
+        <div class="mt-auto">
+          <button id="dark-mode-toggle" class="nav-link">
+            <i data-feather="moon" class="hidden dark:block"></i>
+            <i data-feather="sun" class="dark:hidden"></i>
+            <span class="ml-2">Mode sombre</span>
+          </button>
+        </div>
+      </aside>
+`;
+
+    // Add event listener for mobile menu toggle
+    this.shadowRoot.getElementById('mobile-menu-button').addEventListener('click', (e) => {
+      e.stopPropagation();
+      const sidebar = this.shadowRoot.querySelector('.sidebar');
+      const button = this.shadowRoot.getElementById('mobile-menu-button');
+      sidebar.classList.toggle('open');
+      button.classList.toggle('active');
+      feather.replace();
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!this.shadowRoot.contains(e.target)) {
+        const sidebar = this.shadowRoot.querySelector('.sidebar');
+        const button = this.shadowRoot.getElementById('mobile-menu-button');
+        sidebar.classList.remove('open');
+        button.classList.remove('active');
+      }
+    });
+  }
+}
+customElements.define('custom-navigation', CustomNavigation);

@@ -1,0 +1,123 @@
+/* Custom styles that complement Tailwind */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary: #4F46E5;
+  --secondary: #10B981;
+  --bg-color: #ffffff;
+  --text-color: #111827;
+  --card-bg: #ffffff;
+  --primary-rgb: 79, 70, 229; /* rgb for #4F46E5 */
+  --secondary-rgb: 16, 185, 129; /* rgb for #10B981 */
+}
+
+.dark-mode {
+  --primary: #8B5CF6;
+  --secondary: #10B981;
+  --bg-color: #1F2937;
+  --text-color: #F3F4F6;
+  --card-bg: #374151;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+/* Navigation fixes */
+header {
+    transition: background 0.3s ease;
+}
+
+.mobile-menu {
+    background: rgba(79, 70, 229, 0.95);
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+/* Prayer of the Day Animation */
+@keyframes fadeInPrayer {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.prayer-of-the-day {
+  animation: fadeInPrayer 1s ease-out forwards;
+}
+
+/* Hero Slider Styles */
+#hero-slider {
+  position: relative;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* Custom animation for hero section */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero-content {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* Custom shadow for cards */
+.custom-shadow {
+    box-shadow: 0 10px 30px -10px rgba(79, 70, 229, 0.2);
+}
+
+/* Brand utility classes to keep a single color palette across all pages */
+.text-primary { color: var(--primary) !important; }
+.bg-primary { background-color: var(--primary) !important; }
+.bg-primary-10 { background-color: rgba(var(--primary-rgb), 0.10) !important; }
+.bg-secondary-10 { background-color: rgba(var(--secondary-rgb), 0.10) !important; }
+.border-primary { border-color: var(--primary) !important; }
+
+/* Focus ring helper */
+.focus-ring-primary:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(var(--primary-rgb), 0.12);
+}
+
+/* Hover helpers using Tailwind-like class names used in the HTML */
+.hover\:bg-primary:hover { background-color: var(--primary) !important; color: #fff !important; }
+.hover\:text-primary:hover { color: var(--primary) !important; }
+
+/* Gradient helper (simple) */
+.bg-gradient-primary {
+  background: linear-gradient(to right, rgba(var(--primary-rgb), 0.9), rgba(var(--primary-rgb), 0.6));
+}
+
+/* Ensure SVG/icon fills can use brand color */
+.fill-primary { fill: var(--primary) !important; }
+
+/* Keep utilities responsive and specificities lower than inline Tailwind utilities */
+@media (prefers-reduced-motion: reduce) {
+  .hero-content, .prayer-of-the-day { animation: none; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .mobile-stack {
+        flex-direction: column;
+    }
+}

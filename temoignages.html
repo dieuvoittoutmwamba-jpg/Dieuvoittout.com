@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Témoignages | DIEUVOITTOUT</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/images/slider/slider1.jpg');
+        }
+        .testimony-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-md p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-primary">DIEUVOITTOUT</a>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-8">
+                    <li><a href="#" class="text-gray-700 hover:text-primary">Accueil</a></li>
+                    <li><a href="#" class="text-gray-700 hover:text-primary">Prières</a></li>
+                    <li><a href="#" class="text-primary font-semibold">Témoignages</a></li>
+                    <li><a href="#" class="text-gray-700 hover:text-primary">Contact</a></li>
+                </ul>
+            </nav>
+            <button aria-label="Menu" class="md:hidden focus:outline-none">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section avec Slider -->
+    <section class="relative h-96 overflow-hidden">
+        <!-- Slider Container -->
+        <div class="slider-container relative h-full">
+            <!-- Slides -->
+            <div class="slides flex h-full transition-transform duration-500">
+                <div class="slide w-full h-full flex-shrink-0 bg-cover bg-center relative" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/images/slider/slider1.jpg')">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="text-center px-4 text-white">
+                            <h1 class="text-4xl md:text-5xl font-bold mb-4">Témoignages de Foi</h1>
+                            <p class="text-xl mb-8 max-w-2xl mx-auto">Découvrez les miracles de Dieu dans nos vies</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide w-full h-full flex-shrink-0 bg-cover bg-center relative" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/images/slider/slider2.jpg')">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="text-center px-4 text-white">
+                            <h1 class="text-4xl md:text-5xl font-bold mb-4">Histoires de Transformation</h1>
+                            <p class="text-xl mb-8 max-w-2xl mx-auto">Des vies changées par la puissance de Dieu</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide w-full h-full flex-shrink-0 bg-cover bg-center relative" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/images/slider/slider3.jpg')">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="text-center px-4 text-white">
+                            <h1 class="text-4xl md:text-5xl font-bold mb-4">Gloire à Dieu</h1>
+                            <p class="text-xl mb-8 max-w-2xl mx-auto">Partageons ce que le Seigneur a fait</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <button class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full p-2 focus:outline-none" onclick="moveSlide(-1)">
+                <i data-feather="chevron-left" class="w-6 h-6"></i>
+            </button>
+            <button class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full p-2 focus:outline-none" onclick="moveSlide(1)">
+                <i data-feather="chevron-right" class="w-6 h-6"></i>
+            </button>
+
+            <!-- Dots Navigation -->
+            <div class="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
+                <button class="w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-75 focus:outline-none" onclick="goToSlide(0)"></button>
+                <button class="w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-75 focus:outline-none" onclick="goToSlide(1)"></button>
+                <button class="w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-75 focus:outline-none" onclick="goToSlide(2)"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="bg-white py-16 px-4 sm:px-16 text-center">
+        <div class="max-w-4xl mx-auto">
+            <p class="text-lg text-gray-700 mb-6">
+                "Bienvenue dans l'espace Témoignages — un lieu où la voix de Dieu se fait entendre à travers les histoires de ceux qu'Il a touchés. Ici, chaque parole rend gloire à Dieu et fortifie la foi."
+            </p>
+            <p class="text-gray-500 italic mt-4">
+                "Ils l'ont vaincu à cause du sang de l'Agneau et à cause de la parole de leur témoignage." <br>
+                <span class="not-italic">Apocalypse 12:11</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- Testimonies Section -->
+    <section id="temoignages" class="bg-gray-50 py-12 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Derniers Témoignages</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimony Card 1 -->
+                <div class="testimony-card bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300">
+                    <img src="assets/images/temoignages/temoignage1.jpg" alt="Marie D." class="w-20 h-20 rounded-full mx-auto object-cover">
+                    <p class="text-gray-700 font-semibold text-center mt-4">Marie D. - Paris</p>
+                    <h3 class="text-lg font-bold text-primary mt-2 text-center">Guérison miraculeuse</h3>
+                    <p class="text-gray-600 text-sm mt-4 line-clamp-3">
+                        Après des années de douleurs chroniques, j'ai été guérie instantanément lors d'une soirée de prière. Les médecins n'en revenaient pas lors de mon dernier examen...
+                    </p>
+                    <a href="#" class="text-primary font-medium hover:underline mt-4 block text-center">Lire plus</a>
+                </div>
+
+                <!-- Testimony Card 2 -->
+                <div class="testimony-card bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300">
+                    <img src="assets/images/temoignages/temoignage2.jpg" alt="Jean P." class="w-20 h-20 rounded-full mx-auto object-cover">
+                    <p class="text-gray-700 font-semibold text-center mt-4">Jean P. - Lyon</p>
+                    <h3 class="text-lg font-bold text-primary mt-2 text-center">Délivrance d'addiction</h3>
+                    <p class="text-gray-600 text-sm mt-4 line-clamp-3">
+                        Prisonnier de l'alcool pendant 15 ans, j'ai été totalement libéré après avoir participé à une retraite spirituelle. Aujourd'hui, je suis libre et je peux aider d'autres personnes...
+                    </p>
+                    <a href="#" class="text-primary font-medium hover:underline mt-4 block text-center">Lire plus</a>
+                </div>
+
+                <!-- Testimony Card 3 -->
+                <div class="testimony-card bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300">
+                    <img src="assets/images/temoignages/temoignage3.jpg" alt="Famille L." class="w-20 h-20 rounded-full mx-auto object-cover">
+                    <p class="text-gray-700 font-semibold text-center mt-4">Famille L. - Marseille</p>
+                    <h3 class="text-lg font-bold text-primary mt-2 text-center">Restauration familiale</h3>
+                    <p class="text-gray-600 text-sm mt-4 line-clamp-3">
+                        Notre mariage était au bord du divorce. Après avoir cherché Dieu ensemble, nous avons expérimenté une restauration complète de notre relation. Aujourd'hui, nous servons Dieu en couple...
+                    </p>
+                    <a href="#" class="text-primary font-medium hover:underline mt-4 block text-center">Lire plus</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Share Testimony Section -->
+    <section class="bg-primary-10 py-16 px-4">
+        <div class="max-w-2xl mx-auto bg-white p-8 rounded-2xl shadow-md">
+            <h2 class="text-3xl font-bold text-center mb-6 text-gray-800">Partage ton témoignage</h2>
+            <p class="text-gray-700 text-center mb-8">
+                "Ton histoire peut fortifier la foi de quelqu'un. Partage ce que Dieu a fait pour toi."
+            </p>
+            <form class="space-y-4">
+                <div>
+                    <label for="name" class="block text-gray-700 mb-2">Nom (ou prénom)</label>
+                    <input type="text" id="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                </div>
+                <div>
+                    <label for="email" class="block text-gray-700 mb-2">Email (facultatif)</label>
+                    <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                </div>
+                <div>
+                    <label for="title" class="block text-gray-700 mb-2">Titre de ton témoignage</label>
+                    <input type="text" id="title" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                </div>
+                <div>
+                    <label for="testimony" class="block text-gray-700 mb-2">Ton témoignage</label>
+                    <textarea id="testimony" rows="5" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+                </div>
+                <button type="submit" class="bg-primary hover:bg-primary text-white font-bold py-3 px-6 rounded-full w-full transition duration-300">Envoyer</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Bible Verses Section -->
+    <section class="bg-gray-100 py-12 px-4">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+                    <p class="text-gray-700 italic">"Rendez grâces en toutes choses."</p>
+                    <p class="text-gray-500 mt-2">1 Thessaloniciens 5:18</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+                    <p class="text-gray-700 italic">"Venez et voyez les œuvres de Dieu !"</p>
+                    <p class="text-gray-500 mt-2">Psaume 66:5</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+                    <p class="text-gray-700 italic">"Que celui qui a reçu la grâce de Dieu le dise !"</p>
+                    <p class="text-gray-500 mt-2">Psaume 107:2</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conclusion Section -->
+    <section class="bg-white py-16 px-4 text-center">
+        <div class="max-w-3xl mx-auto">
+            <p class="text-xl text-gray-700 font-medium">
+                "Chaque témoignage est une semence d'espérance. Que ces récits nourrissent ta foi et t'encouragent à croire encore au Dieu qui voit tout et agit toujours."
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 px-4">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-4">DIEUVOITTOUT</h3>
+                    <p class="text-gray-300">Une lumière pour cette génération.</p>
+                </div>
+                <div class="flex space-x-6 mb-6 md:mb-0">
+                    <a href="#" aria-label="Facebook" class="text-gray-300 hover:text-primary transition duration-300">
+                        <i data-feather="facebook"></i>
+                    </a>
+                    <a href="#" aria-label="Instagram" class="text-gray-300 hover:text-primary transition duration-300">
+                        <i data-feather="instagram"></i>
+                    </a>
+                    <a href="#" aria-label="YouTube" class="text-gray-300 hover:text-primary transition duration-300">
+                        <i data-feather="youtube"></i>
+                    </a>
+                </div>
+                <div class="text-gray-300 text-sm">
+                    <a href="#" class="hover:text-primary transition duration-300">Mentions légales</a> | 
+                    <a href="#" class="hover:text-primary transition duration-300">Contact</a> | 
+                    <a href="#" class="hover:text-primary transition duration-300">Politique de confidentialité</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2025 DIEUVOITTOUT. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        feather.replace();
+        
+        // Mobile menu toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('button[aria-label="Menu"]');
+            const mobileMenu = document.querySelector('#mobile-menu');
+
+            // Vérifier l'existence des éléments avant d'ajouter l'écouteur
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            // Slider functionality
+            let currentSlide = 0;
+            const slides = document.querySelector('.slides');
+            const totalSlides = document.querySelectorAll('.slide').length;
+            
+            // Fonction pour mettre à jour la position des slides
+            function updateSlidePosition() {
+                slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+                updateDots();
+            }
+
+            // Fonction pour naviguer entre les slides
+            window.moveSlide = function(direction) {
+                currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+                updateSlidePosition();
+            }
+
+            // Fonction pour aller à un slide spécifique
+            window.goToSlide = function(index) {
+                currentSlide = index;
+                updateSlidePosition();
+            }
+
+            // Fonction pour mettre à jour les points de navigation
+            function updateDots() {
+                const dots = document.querySelectorAll('.absolute.bottom-4 button');
+                dots.forEach((dot, index) => {
+                    if (index === currentSlide) {
+                        dot.classList.add('bg-opacity-100');
+                    } else {
+                        dot.classList.remove('bg-opacity-100');
+                    }
+                });
+            }
+
+            // Auto-rotation des slides
+            setInterval(() => {
+                moveSlide(1);
+            }, 5000);
+
+            // Initialisation
+            updateDots();
+        });
+    </script>
+</body>
+</html>
