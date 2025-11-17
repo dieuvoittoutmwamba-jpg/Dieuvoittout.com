@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À Propos - DIEUVOITTOUT</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4F46E5',
+                        secondary: '#10B981',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Shared navigation (same as index) -->
+    <script src="components/navigation-horizontal.js"></script>
+    <custom-navigation-horizontal></custom-navigation-horizontal>
+    <!-- Add top padding so page content isn't hidden under the fixed nav -->
+    <style>body{padding-top:72px}</style>
+
+    <!-- Hero Section -->
+    <section class="relative flex flex-col items-center justify-center min-h-[70vh] bg-cover bg-center text-white" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('assets/images/apropos/hero.jpg')">
+        <div class="container px-6 mx-auto text-center space-y-6">
+            <h1 class="text-4xl md:text-6xl font-bold">Une lumière pour cette génération</h1>
+            <p class="text-xl md:text-2xl max-w-2xl mx-auto">Parce que Dieu voit au-delà des apparences — et son regard restaure les cœurs.</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-16 space-y-20">
+        <!-- Mission Section -->
+        <section class="space-y-8">
+            <h2 class="text-3xl font-bold text-center text-primary">Notre Mission</h2>
+            <div class="max-w-4xl mx-auto text-center space-y-6">
+                <p class="text-lg">DIEUVOITTOUT est une plateforme chrétienne née du désir de rendre visible la présence de Dieu dans le monde d'aujourd'hui.</p>
+                <p class="text-lg">À travers la <span class="font-semibold">prière</span>, les <span class="font-semibold">témoignages</span> et les <span class="font-semibold">enseignements</span>, nous voulons inspirer chacun à découvrir un Dieu proche, aimant et attentif.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                    <div class="bg-white p-6 rounded-xl shadow-md space-y-3">
+                        <i data-feather="star" class="w-8 h-8 text-primary mx-auto"></i>
+                        <h3 class="font-bold">Éveiller la foi</h3>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md space-y-3">
+                        <i data-feather="heart" class="w-8 h-8 text-primary mx-auto"></i>
+                        <h3 class="font-bold">Encourager les cœurs</h3>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md space-y-3">
+                        <i data-feather="sun" class="w-8 h-8 text-primary mx-auto"></i>
+                        <h3 class="font-bold">Répandre la lumière du Christ</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vision Section -->
+        <section class="space-y-8">
+            <h2 class="text-3xl font-bold text-center text-primary">Notre Vision</h2>
+            <div class="max-w-4xl mx-auto text-center space-y-6">
+                <p class="text-lg">Être une <span class="font-semibold">voix d'espérance</span> dans un monde bruyant.</p>
+                <p class="text-lg">DIEUVOITTOUT croit qu'à travers les médias et la parole partagée, Dieu continue de toucher des vies et de transformer des cœurs.</p>
+                <p class="text-lg">Nous rêvons d'un espace digital où <span class="font-semibold">la foi devient une expérience quotidienne</span> et <span class="font-semibold">la communion se vit au-delà des murs</span>.</p>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="space-y-8">
+            <h2 class="text-3xl font-bold text-center text-primary">Nos Valeurs</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-md text-center space-y-3">
+                    <i data-feather="user" class="w-8 h-8 text-primary mx-auto"></i>
+                    <h3 class="font-bold text-lg">Authenticité</h3>
+                    <p>Une foi vécue simplement, sans façade.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md text-center space-y-3">
+                    <i data-feather="anchor" class="w-8 h-8 text-primary mx-auto"></i>
+                    <h3 class="font-bold text-lg">Espérance</h3>
+                    <p>Dieu agit encore, même quand tout semble perdu.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md text-center space-y-3">
+                    <i data-feather="share-2" class="w-8 h-8 text-primary mx-auto"></i>
+                    <h3 class="font-bold text-lg">Partage</h3>
+                    <p>Chaque vie est un canal de lumière.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md text-center space-y-3">
+                    <i data-feather="heart" class="w-8 h-8 text-primary mx-auto"></i>
+                    <h3 class="font-bold text-lg">Amour</h3>
+                    <p>Le cœur du message de Christ et le moteur de notre mission.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Section -->
+        <section class="space-y-8">
+            <h2 class="text-3xl font-bold text-center text-primary">Pourquoi DIEUVOITTOUT ?</h2>
+            <div class="max-w-4xl mx-auto text-center space-y-6">
+                <p class="text-lg">Ce nom rappelle une vérité puissante : <span class="font-semibold">rien n'échappe au regard de Dieu</span>.</p>
+                <p class="text-lg">Là où le monde oublie, Dieu se souvient. Là où les cœurs se cachent, Il voit et relève.</p>
+                <p class="text-lg">DIEUVOITTOUT est une invitation à vivre sous le regard bienveillant de Dieu, avec confiance et espérance.</p>
+            </div>
+        </section>
+
+        <!-- Founder Section -->
+        <section class="space-y-8">
+            <h2 class="text-3xl font-bold text-center text-primary">Notre Fondateur</h2>
+            <div class="flex flex-col md:flex-row items-center gap-8 max-w-4xl mx-auto">
+                <img src="assets/images/apropos/fondateur.jpg" alt="Fondateur" class="w-64 h-64 rounded-full object-cover shadow-lg">
+                <div class="space-y-4">
+                    <p class="text-lg">DIEUVOITTOUT a été fondé par <span class="font-semibold">Dieuvoittout Mwamba Ntumba</span>, serviteur de Dieu et entrepreneur passionné par la communication chrétienne.</p>
+                    <p class="text-lg">À travers ce projet, il souhaite offrir un espace numérique sain, où <span class="font-semibold">la foi et la technologie se rencontrent pour édifier les âmes</span>.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contribute Section -->
+        <section class="space-y-8">
+            <h2 class="text-3xl font-bold text-center text-primary">Contribuer à la Mission</h2>
+            <div class="bg-primary/10 border-l-4 border-primary p-6 rounded-xl shadow max-w-4xl mx-auto">
+                <p class="text-lg mb-4">Tu peux faire partie de cette aventure spirituelle :</p>
+                <ul class="space-y-3 list-disc pl-5">
+                    <li>En <span class="font-semibold">partageant</span> les contenus du site</li>
+                    <li>En <span class="font-semibold">envoyant ton témoignage ou ta prière</span></li>
+                    <li>En <span class="font-semibold">collaborant</span> (rédaction, graphisme, musique, intercession)</li>
+                    <li>En <span class="font-semibold">soutenant</span> par la prière ou les ressources</li>
+                </ul>
+                <p class="mt-6 text-center font-semibold">Ensemble, faisons grandir cette lumière <i data-feather="star" class="inline w-4 h-4"></i></p>
+            </div>
+        </section>
+
+        <!-- Bible Quote -->
+        <section class="max-w-3xl mx-auto text-center italic text-gray-700 py-12">
+            <p class="text-xl">"Car les yeux de l'Éternel parcourent toute la terre, pour soutenir ceux dont le cœur est tout entier à Lui."</p>
+            <p class="mt-2">— 2 Chroniques 16:9</p>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="text-center space-y-6">
+            <h3 class="text-2xl font-semibold">Rejoignez-nous dans cette mission divine</h3>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#" class="bg-gold-500 hover:bg-gold-600 text-white font-semibold py-3 px-6 rounded-full transition duration-300 ease-in-out transform hover:scale-105 flex items-center gap-2">
+                    <i data-feather="mail" class="w-4 h-4"></i> Rejoindre la mission
+                </a>
+                <a href="#" class="bg-white hover:bg-gray-100 text-gold-600 font-semibold py-3 px-6 rounded-full transition duration-300 ease-in-out transform hover:scale-105 border border-gold-500 flex items-center gap-2">
+                    <i data-feather="pray" class="w-4 h-4"></i> Envoyer une prière
+                </a>
+                <a href="#" class="bg-white hover:bg-gray-100 text-gold-600 font-semibold py-3 px-6 rounded-full transition duration-300 ease-in-out transform hover:scale-105 border border-gold-500 flex items-center gap-2">
+                    <i data-feather="edit" class="w-4 h-4"></i> Partager mon témoignage
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 px-4">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-4">DIEUVOITTOUT</h3>
+                    <p class="text-gray-300">Une lumière pour cette génération.</p>
+                </div>
+                <div class="flex space-x-6 mb-6 md:mb-0">
+                    <a href="#" aria-label="Facebook" class="text-gray-300 hover:text-primary transition duration-300">
+                        <i data-feather="facebook"></i>
+                    </a>
+                    <a href="#" aria-label="Instagram" class="text-gray-300 hover:text-primary transition duration-300">
+                        <i data-feather="instagram"></i>
+                    </a>
+                    <a href="#" aria-label="YouTube" class="text-gray-300 hover:text-primary transition duration-300">
+                        <i data-feather="youtube"></i>
+                    </a>
+                </div>
+                <div class="text-gray-300 text-sm">
+                    <a href="#" class="hover:text-primary transition duration-300">Mentions légales</a> | 
+                    <a href="#" class="hover:text-primary transition duration-300">Contact</a> | 
+                    <a href="#" class="hover:text-primary transition duration-300">Politique de confidentialité</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2025 DIEUVOITTOUT. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>

@@ -26,7 +26,7 @@ class CustomNavigationHorizontal extends HTMLElement {
         .logo {
           font-size: 1.25rem;
           font-weight: 700;
-          color: #4F46E5;
+          color: #f15a24;
           display: flex;
           align-items: center;
           gap: 0.5rem;
@@ -76,10 +76,11 @@ class CustomNavigationHorizontal extends HTMLElement {
       </style>
       <nav>
         <a href="/" class="logo">
-          <img src="assets/images/logo.jpg" alt="Logo DIEUVOITTOUT" style="height: 40px; width: auto; max-width: 150px; object-fit: contain;">
+          <img src="assets/images/logo.png" alt="Logo DIEUVOITTOUT" style="height: 90px; width: auto; max-width: 200px; object-fit: contain;">
 </a>
 <div class="nav-links">
           <a href="/" class="nav-link">Accueil</a>
+          <a href="apropos.html" class="nav-link">À Propos</a>
           <a href="etudes.html" class="nav-link">Études</a>
           <a href="priere.html" class="nav-link">Prière</a>
           <a href="temoignages.html" class="nav-link">Témoignages</a>

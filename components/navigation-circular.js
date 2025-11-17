@@ -52,7 +52,7 @@ class CustomNavigationCircular extends HTMLElement {
           cursor: pointer;
         }
         .menu-item:hover {
-          background: #4F46E5;
+          background: #f15a24;
           color: white;
         }
         :host([open]) .menu-item {

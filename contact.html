@@ -26,29 +26,11 @@
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
-    <!-- Header -->
-    <header class="sticky top-0 z-50 backdrop-blur bg-white/80 shadow-sm">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <a href="#accueil" class="text-2xl font-bold text-primary font-display">DIEUVOITTOUT</a>
-                
-                <!-- Mobile menu button -->
-                <div class="md:hidden">
-                    <button type="button" class="text-gray-700 hover:text-primary focus:outline-none" aria-label="Menu">
-                        <i data-feather="menu"></i>
-                    </button>
-                </div>
-                
-                <!-- Desktop menu -->
-                <div class="hidden md:flex space-x-8">
-                    <a href="#accueil" class="text-gray-700 hover:text-primary">Accueil</a>
-                    <a href="#prieres" class="text-gray-700 hover:text-primary">Prières</a>
-                    <a href="#temoignages" class="text-gray-700 hover:text-primary">Témoignages</a>
-                    <a href="#contact" class="text-primary font-medium">Contact</a>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <!-- Shared navigation (same as index) -->
+    <script src="components/navigation-horizontal.js"></script>
+    <custom-navigation-horizontal></custom-navigation-horizontal>
+    <!-- Add top padding so page content isn't hidden under the fixed nav -->
+    <style>body{padding-top:72px}</style>
 
     <main>
         <!-- Hero Section -->

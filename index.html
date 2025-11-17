@@ -61,7 +61,7 @@
         <div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-purple-600/90"></div>
       </div>
         <div class="container mx-auto px-6 text-center relative z-10">
-<h1 class="text-4xl md:text-6xl font-bold mb-6">BIENVENUE</h1>
+<h1 class="text-4xl md:text-6xl font-bold mb-6">Quand Dieu voit, tout change !</h1>
             <p class="text-xl md:text-2xl mb-8">Nous sommes tous une lumière pour cette génération.<br>
             Nous croyons qu'en cette époque pleine de défis, Dieu parle encore, agit encore, et change encore des vies.<br>
             Laisse Sa Parole t'éclairer aujourd'hui.</p>
@@ -116,7 +116,7 @@
                 <!-- Feature 1 -->
                 <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300">
                     <div class="bg-primary bg-opacity-10 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
-                        <i data-feather="book" class="text-primary w-8 h-8"></i>
+                        <i data-feather="book" class="w-8 h-8 text-white"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-800 mb-3">Études Bibliques</h3>
                     <p class="text-gray-600">Des enseignements profonds et accessibles pour nourrir votre foi quotidienne.</p>
@@ -132,7 +132,7 @@
                 <!-- Feature 3 -->
                 <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300">
                     <div class="bg-primary bg-opacity-10 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
-                        <i data-feather="heart" class="text-primary w-8 h-8"></i>
+                        <i data-feather="heart" class="w-8 h-8 text-white"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-800 mb-3">Prière</h3>
                     <p class="text-gray-600">Un espace dédié à la prière et à l'intercession pour vos besoins spirituels.</p>
@@ -140,6 +140,114 @@
             </div>
         </div>
     </section>
+
+    <!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vidéos du Jour - Dieuvoittout</title>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- SwiperJS CDN -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <!-- Section Vidéos -->
+  <section class="py-12 px-4 md:px-8 bg-white shadow-inner">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-2">Vidéos du Jour</h2>
+      <p class="text-gray-600">Découvrez des enseignements, témoignages et moments d’adoration qui fortifient la foi.</p>
+    </div>
+
+    <!-- Carrousel -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+
+        <!-- Carte vidéo 1 -->
+        <div class="swiper-slide bg-white rounded-2xl shadow-md overflow-hidden">
+          <div class="aspect-video">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Témoignage de foi"
+              allowfullscreen></iframe>
+          </div>
+          <div class="p-4 text-center">
+            <h3 class="font-semibold text-lg text-gray-800">Témoignage de foi</h3>
+            <p class="text-sm text-gray-500 italic mt-1">“Ta parole est une lampe à mes pieds.” — Psaume 119:105</p>
+          </div>
+        </div>
+
+        <!-- Carte vidéo 2 -->
+        <div class="swiper-slide bg-white rounded-2xl shadow-md overflow-hidden">
+          <div class="aspect-video">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/3GwjfUFyY6M" title="Méditation du jour"
+              allowfullscreen></iframe>
+          </div>
+          <div class="p-4 text-center">
+            <h3 class="font-semibold text-lg text-gray-800">Méditation du jour</h3>
+            <p class="text-sm text-gray-500 italic mt-1">“Je puis tout par celui qui me fortifie.” — Philippiens 4:13</p>
+          </div>
+        </div>
+
+        <!-- Carte vidéo 3 -->
+        <div class="swiper-slide bg-white rounded-2xl shadow-md overflow-hidden">
+          <div class="aspect-video">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/L_jWHffIx5E" title="Louange du matin"
+              allowfullscreen></iframe>
+          </div>
+          <div class="p-4 text-center">
+            <h3 class="font-semibold text-lg text-gray-800">Louange du matin</h3>
+            <p class="text-sm text-gray-500 italic mt-1">“Louez l’Éternel, car il est bon !” — Psaume 136:1</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Navigation -->
+      <div class="flex justify-center items-center mt-6 space-x-4">
+        <div class="swiper-button-prev text-blue-600"></div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next text-blue-600"></div>
+      </div>
+    </div>
+
+    <!-- Bouton voir plus -->
+    <div class="text-center mt-8">
+      <a href="#"
+        class="inline-block bg-blue-700 text-white px-6 py-3 rounded-full shadow-md hover:bg-blue-800 transition">🎧 Voir
+        plus de vidéos</a>
+    </div>
+  </section>
+
+  <!-- SwiperJS config -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        640: { slidesPerView: 1 },
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+      },
+    });
+  </script>
+</body>
+</html>
+
 
     <!-- Testimonials Section -->
     <section class="py-20 bg-white">

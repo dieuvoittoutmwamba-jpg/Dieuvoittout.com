@@ -18,23 +18,11 @@
     </style>
 </head>
 <body class="font-sans bg-gray-50">
-    <!-- Header -->
-    <header class="bg-white shadow-md p-4 sticky top-0 z-50">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-primary">DIEUVOITTOUT</a>
-            <nav class="hidden md:block">
-                <ul class="flex space-x-8">
-                    <li><a href="#" class="text-gray-700 hover:text-primary">Accueil</a></li>
-                    <li><a href="#" class="text-gray-700 hover:text-primary">Prières</a></li>
-                    <li><a href="#" class="text-primary font-semibold">Témoignages</a></li>
-                    <li><a href="#" class="text-gray-700 hover:text-primary">Contact</a></li>
-                </ul>
-            </nav>
-            <button aria-label="Menu" class="md:hidden focus:outline-none">
-                <i data-feather="menu"></i>
-            </button>
-        </div>
-    </header>
+    <!-- Shared navigation (same as index) -->
+    <script src="components/navigation-horizontal.js"></script>
+    <custom-navigation-horizontal></custom-navigation-horizontal>
+    <!-- Add top padding so page content isn't hidden under the fixed nav -->
+    <style>body{padding-top:72px}</style>
 
     <!-- Hero Section avec Slider -->
     <section class="relative h-96 overflow-hidden">
@@ -97,6 +85,99 @@
             </p>
         </div>
     </section>
+
+    <!-- SECTION VIDÉOS INSPIRANTES - DIEUVOITTOUT -->
+<section class="bg-gray-50 py-16 px-6">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+      🎬 Vidéos inspirantes
+    </h2>
+    <p class="text-gray-600 mb-12 max-w-2xl mx-auto">
+      Regarde, médite et sois édifié par ces vidéos chrétiennes puissantes.
+    </p>
+
+    <!-- Grille des vidéos -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Carte vidéo -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition">
+        <img src="https://source.unsplash.com/600x400/?bible,light" alt="Vidéo 1" class="w-full h-56 object-cover">
+        <div class="p-5">
+          <h3 class="text-lg font-semibold text-gray-800">Dieu agit encore aujourd’hui</h3>
+          <p class="text-sm text-gray-600 mt-2">
+            Découvre comment la foi transforme encore des vies aujourd’hui.
+          </p>
+          <button onclick="openVideo('https://www.youtube.com/embed/ysz5S6PUM-U')" class="inline-block mt-4 bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition">
+            ▶ Regarder
+          </button>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition">
+        <img src="https://source.unsplash.com/600x400/?prayer,faith" alt="Vidéo 2" class="w-full h-56 object-cover">
+        <div class="p-5">
+          <h3 class="text-lg font-semibold text-gray-800">La prière qui change tout</h3>
+          <p class="text-sm text-gray-600 mt-2">
+            Un moment de prière profond pour retrouver la paix intérieure.
+          </p>
+          <button onclick="openVideo('https://www.youtube.com/embed/eBG7P-K-r1Y')" class="inline-block mt-4 bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition">
+            ▶ Regarder
+          </button>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition">
+        <img src="https://source.unsplash.com/600x400/?worship,church" alt="Vidéo 3" class="w-full h-56 object-cover">
+        <div class="p-5">
+          <h3 class="text-lg font-semibold text-gray-800">Louange et paix intérieure</h3>
+          <p class="text-sm text-gray-600 mt-2">
+            Chante et médite avec cette louange pleine d’espérance.
+          </p>
+          <button onclick="openVideo('https://www.youtube.com/embed/ScMzIvxBSi4')" class="inline-block mt-4 bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition">
+            ▶ Regarder
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lien voir plus -->
+    <div class="mt-10">
+      <a href="videos.html" class="text-blue-600 hover:underline text-lg font-medium">
+        Voir toutes les vidéos →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- MODALE LECTEUR VIDÉO -->
+<div id="videoModal" class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center z-50">
+  <div class="relative w-full max-w-3xl mx-4">
+    <button onclick="closeVideo()" class="absolute -top-10 right-0 text-white text-3xl font-bold">&times;</button>
+    <div class="relative pb-[56.25%] h-0 overflow-hidden rounded-2xl shadow-xl">
+      <iframe id="videoFrame" class="absolute top-0 left-0 w-full h-full" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
+<!-- SCRIPT LECTEUR MODALE -->
+<script>
+  const modal = document.getElementById('videoModal');
+  const frame = document.getElementById('videoFrame');
+
+  function openVideo(url) {
+    frame.src = url + '?autoplay=1';
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+  }
+
+  function closeVideo() {
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+    frame.src = '';
+  }
+</script>
+<!-- FIN SECTION VIDÉOS INSPIRANTES -->
+
 
     <!-- Testimonies Section -->
     <section id="temoignages" class="bg-gray-50 py-12 px-4">

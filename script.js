@@ -19,15 +19,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             }
         });
     });
+});
 // Hero Slider Functionality
 function initHeroSlider() {
   const slider = document.getElementById('hero-slider');
   if (!slider) return;
 
   const slides = [
-    { type: 'image', src: 'assets/images/site/card1.jpg' },
-    { type: 'image', src: 'assets/images/site/card2.jpg' },
-    { type: 'image', src: 'assets/images/site/card3.jpg' },
+    { type: 'image', src: 'assets/images/slider/slider1.jpg' },
+    { type: 'image', src: 'assets/images/slider/slider2.jpg' },
+    { type: 'image', src: 'assets/images/slider/slider3.jpg' },
     // Add more slides as needed
   ];
 
@@ -38,6 +39,10 @@ function initHeroSlider() {
     
     if (slide.type === 'image') {
       slideElement.style.backgroundImage = `url('${slide.src}')`;
+      slideElement.style.backgroundSize = 'cover';
+      slideElement.style.backgroundPosition = 'center';
+      slideElement.style.backgroundRepeat = 'no-repeat';
+      slideElement.style.zIndex = '0';
     } else if (slide.type === 'video') {
       // For video slides, you would add a video element here
     }
@@ -119,13 +124,24 @@ async function fetchVerseOfTheDay() {
     const data = await response.json();
     const verseContainer = document.getElementById('verse-of-the-day');
     if (verseContainer) {
-      verseContainer.innerHTML = `
-        <div class="bg-primary/10 p-4 rounded-lg mb-4 transition-all hover:scale-[1.02]">
-          <p class="font-bold text-primary mb-2">Verset du jour</p>
-          <p class="italic mb-1">"${data.text}"</p>
-          <p class="text-right text-sm">— ${data.reference}</p>
-        </div>
-      `;
+      // Only render when the API returned usable text and reference
+      const text = data && (data.text || data.verses || data[0] && data[0].text);
+      const reference = data && (data.reference || data.verses && data.verses[0] && data.verses[0].reference);
+
+      if (text && reference) {
+        verseContainer.innerHTML = `
+          <div class="bg-primary/10 p-4 rounded-lg mb-4 transition-all hover:scale-[1.02]">
+            <p class="font-bold text-primary mb-2">Verset du jour</p>
+            <p class="italic mb-1">"${text}"</p>
+            <p class="text-right text-sm">— ${reference}</p>
+          </div>
+        `;
+        verseContainer.style.display = '';
+      } else {
+        // Hide container when the API doesn't return a proper verse (avoid showing 'undefined')
+        verseContainer.innerHTML = '';
+        verseContainer.style.display = 'none';
+      }
     }
   } catch (error) {
     console.error('Error fetching verse:', error);
@@ -155,5 +171,4 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
-});
 });
